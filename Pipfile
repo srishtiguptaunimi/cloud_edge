@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+ipykernel = "*"
+scikit-learn = "*"
+scikit-image = "*"
+reportlab = "*"
+opencv-python = "*"
+imageio = "*"
+av = "*"
+matplotlib = "*"
+streamlit = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
