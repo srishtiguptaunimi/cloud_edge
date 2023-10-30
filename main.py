@@ -13,7 +13,6 @@ from skimage.morphology import reconstruction
 from skimage.measure import label
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
-from matplotlib.pyplot import imshow
 
 st.write("""
 # My first leave count App!
@@ -28,8 +27,8 @@ if uploaded_file:
 
     st.image(byte_img)
 
-    jpeg_image = Image.open(io.BytesIO(byte_img))
-    rgb_image = np.array(jpeg_image)[:, :, :3]
+    img = Image.open(io.BytesIO(byte_img))
+    rgb_image = np.array(img)[:, :, :3]
 
     # Convert to float: Important for subtraction later which won't work with uint8
     image = img_as_float(rgb_image)
